@@ -1,16 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../../../components/Logo";
+import Themes from "../../../components/theme/Themes";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
+    const { logOut, user } = useContext(AuthContext);
+
     const NavMenu =
         <>
-            <li><Link to={'/'}>Home</Link></li>
-            <li><Link to={'/about'}>About</Link></li>
-            <li><Link to={'/services'}>Services</Link></li>
-            <li><Link to={'/blog'}>Blog</Link></li>
-            <li><Link to={'/contract'}>Contact</Link></li>
-
+            <li><NavLink to={'/'} activeClassName="text-accent" className="nav-link">Home</NavLink></li>
+            {user && <li><NavLink to={'/myBookings'} activeClassName="text-accent" className="nav-link">My Bookings</NavLink></li>}
+            <li><NavLink to={'/about'} activeClassName="text-accent" className="nav-link">About</NavLink></li>
+            <li><NavLink to={'/services'} activeClassName="text-accent" className="nav-link">Services</NavLink></li>
+            <li><NavLink to={'/blog'} activeClassName="text-accent" className="nav-link">Blog</NavLink></li>
+            <li><NavLink to={'/contract'} activeClassName="text-accent" className="nav-link">Contact</NavLink></li>
         </>
+
     return (
         <div className="container mx-auto">
             <div className="navbar bg-base-100 pb-9">
@@ -43,7 +49,11 @@ const NavBar = () => {
                         {NavMenu}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end flex gap-3">
+                    <Themes />
+                    {
+                        user ? <button className="btn btn-ghost btn-outline" onClick={() => logOut()}>Log out</button> : <Link to={'login'} className="btn btn-ghost btn-outline" >Log in</Link>
+                    }
                     <a className="btn btn-outline btn-accent">Appointment</a>
                 </div>
             </div>

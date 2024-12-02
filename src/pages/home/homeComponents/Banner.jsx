@@ -10,8 +10,8 @@ const Banner = () => {
             img: img4,
             slider1: '#slide4',
             slider2: '#slide2',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing ',
-            discription: 'Lorem ipsum dolor sit amet consectetur adipisicing jhkkasdhkhfkskkl dfkdfjskfakdshfk'
+            title: 'Affordable Price For Car Servicing',
+            discription: 'There are many variations of passages of  available, but the majority have suffered alteration in some form'
 
         },
         {
@@ -19,8 +19,8 @@ const Banner = () => {
             img: img1,
             slider1: '#slide1',
             slider2: '#slide3',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing ',
-            discription: 'Lorem ipsum dolor sit amet consectetur adipisicing jhkkasdhkhfkskkl dfkdfjskfakdshfk'
+            title: 'Affordable Price For Car Servicing',
+            discription: 'There are many variations of passages of  available, but the majority have suffered alteration in some form'
 
         },
         {
@@ -28,8 +28,8 @@ const Banner = () => {
             img: img2,
             slider1: '#slide2',
             slider2: '#slide4',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing ',
-            discription: 'Lorem ipsum dolor sit amet consectetur adipisicing jhkkasdhkhfkskkl dfkdfjskfakdshfk'
+            title: 'Affordable Price For Car Servicing',
+            discription: 'There are many variations of passages of  available, but the majority have suffered alteration in some form'
 
         },
         {
@@ -37,8 +37,8 @@ const Banner = () => {
             img: img3,
             slider1: '#slide3',
             slider2: '#slide1',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing ',
-            discription: 'Lorem ipsum dolor sit amet consectetur adipisicing jhkkasdhkhfkskkl dfkdfjskfakdshfk'
+            title: 'Affordable Price For Car Servicing',
+            discription: 'There are many variations of passages of  available, but the majority have suffered alteration in some form'
 
         },
     ]
@@ -52,15 +52,15 @@ const Banner = () => {
                             className="w-full rounded-xl" />
                         <div className="absolute left-5 right-5 bottom-0 flex -translate-y-1/2 transform justify-end ">
                             <a href={slider.slider1} className="btn btn-circle mr-5">❮</a>
-                            <a href={slider.slider2} className="btn btn-circle">❯</a>
+                            <a href={slider.slider2} className="btn btn-circle bg-[#FF3811]">❯</a>
                         </div>
                         <div className="absolute h-full left-0  top-0 w-3/4 bg-gradient-to-r from-[#141414da] to-[#1b1a1a00]">
                             <div className='w-1/3 pt-16 pl-4 items-center'>
                                 <h1 className='text-white font-semibold text-3xl'>{slider.title}</h1>
-                                <p className='text-white '>{slider.discription}</p>
+                                <p className='text-white text-sm'>{slider.discription}</p>
                                 <div className='flex gap-3'>
-                                    <button className="btn btn-info">Info</button>
-                                    <button className="btn btn-outline btn-accent">Accent</button>
+                                    <button className="btn bg-[#FF3811] text-white">Discover More</button>
+                                    <button className="btn btn-outline btn-info">Latest Project</button>
 
                                 </div>
                             </div>
